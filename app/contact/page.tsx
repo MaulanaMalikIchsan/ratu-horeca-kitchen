@@ -19,10 +19,14 @@ export default function ContactPage() {
   const [kebutuhan, setKebutuhan] = useState("");
   const contacts = [
     {
-      icon: Phone,
-      title: "WhatsApp",
-      value: "+62 812 3456 7890",
-    },
+  icon: Phone,
+  title: "WhatsApp",
+  value: [
+    "+62 812 3456 7890",
+    "+62 813 4567 8901",
+    "+62 814 5678 9012",
+  ],
+},
     {
       icon: Mail,
       title: "Email",
@@ -84,9 +88,15 @@ export default function ContactPage() {
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-400">
-                      {item.value}
-                    </p>
+                    {Array.isArray(item.value) ? (
+                      <div className="space-y-1 text-gray-400">
+                        {item.value.map((phone) => (
+                          <p key={phone}>{phone}</p>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="text-gray-400">{item.value}</p>
+                    )}
                   </div>
                 );
               })}
@@ -172,25 +182,26 @@ export default function ContactPage() {
               </div>
 
               {/* MAP */}
-              <div className="flex min-h-[500px] items-center justify-center rounded-2xl border border-yellow-500/20 bg-zinc-950 p-8">
-
-                <div className="text-center">
-
-                  <MapPin
-                    size={60}
-                    className="mx-auto mb-6 text-yellow-500"
-                  />
-
-                  <h3 className="mb-4 text-2xl font-bold">
-                    Lokasi Workshop
-                  </h3>
+              <div className="overflow-hidden rounded-2xl border border-yellow-500/20 bg-zinc-950">
+                <div className="p-8">
+                  <h2 className="mb-3 text-3xl font-bold">
+                    Lokasi Workshop & Office
+                  </h2>
 
                   <p className="text-gray-400">
-                    Google Maps akan ditampilkan di sini.
+                    Cafe Garasi 1999, Jl. Ciliwung 4, Sukahati, Cibinong, Bogor.
                   </p>
-
                 </div>
 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.1650556280051!2d106.81460619035285!3d-6.479808970349673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c37004e1dce7%3A0xfe93e4469292eabe!2sCafe%20Garasi%201999!5e0!3m2!1sen!2sid!4v1781776755424!5m2!1sen!2sid"
+                    width="100%"
+                    height="380"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full"
+                  />
               </div>
 
             </div>

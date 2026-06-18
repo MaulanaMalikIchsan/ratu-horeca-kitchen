@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Navbar from "../../components/navbar";
-import { whatsappLink } from "../../lib/constants";
 import ConsultationButton from "../../components/consultation-button";
 import {
   UtensilsCrossed,
+  PencilRuler,
   Coffee,
   Hotel,
   Croissant,
@@ -11,47 +11,50 @@ import {
   ChefHat,
   House,
   Building2,
+  Hammer,
+  Wrench,
+  ShieldCheck,
 } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
-    {
-      icon: "📐",
-      title: "Kitchen Design",
-      desc: "Perencanaan layout kitchen yang efisien, ergonomis, dan sesuai alur operasional bisnis.",
-      image: "/workshop/workshop-production.png",
-    },
-    {
-      icon: "🏗️",
-      title: "Kitchen Contractor",
-      desc: "Pengerjaan proyek kitchen mulai dari renovasi, pembangunan, instalasi, hingga serah terima.",
-      image: "/workshop/workshop-installation.png",
-    },
-    {
-      icon: "🍳",
-      title: "Kitchen Equipment Supply",
-      desc: "Penyediaan equipment kitchen profesional untuk restoran, cafe, hotel, bakery, dan central kitchen.",
-      image: "/services/services-equipment.png",
-    },
-    {
-      icon: "🔨",
-      title: "Stainless Fabrication",
-      desc: "Pembuatan custom stainless seperti meja kerja, sink, rack, hood, dan equipment sesuai kebutuhan.",
-      image: "/workshop/workshop-welding.png",
-    },
-    {
-      icon: "🔧",
-      title: "Installation & Commissioning",
-      desc: "Instalasi equipment, testing fungsi, dan memastikan kitchen siap digunakan secara optimal.",
-      image: "/workshop/workshop-installation-2.png",
-    },
-    {
-      icon: "🛡️",
-      title: "Maintenance & After Sales",
-      desc: "Layanan perawatan, perbaikan, dan dukungan teknis untuk menjaga performa kitchen Anda.",
-      image: "/workshop/workshop-building.png",
-    },
-  ];
+  {
+    icon: PencilRuler,
+    title: "Kitchen Design",
+    desc: "Perencanaan layout kitchen yang efisien, ergonomis, dan sesuai alur operasional bisnis.",
+    image: "/workshop/workshop-production.png",
+  },
+  {
+    icon: Building2,
+    title: "Kitchen Contractor",
+    desc: "Pengerjaan proyek kitchen mulai dari renovasi, pembangunan, instalasi, hingga serah terima.",
+    image: "/workshop/workshop-installation.png",
+  },
+  {
+    icon: ChefHat,
+    title: "Kitchen Equipment Supply",
+    desc: "Penyediaan equipment kitchen profesional untuk restoran, cafe, hotel, bakery, dan central kitchen.",
+    image: "/services/services-equipment.png",
+  },
+  {
+    icon: Hammer,
+    title: "Stainless Fabrication",
+    desc: "Pembuatan custom stainless seperti meja kerja, sink, rack, hood, dan equipment sesuai kebutuhan.",
+    image: "/workshop/workshop-welding.png",
+  },
+  {
+    icon: Wrench,
+    title: "Installation & Commissioning",
+    desc: "Instalasi equipment, testing fungsi, dan memastikan kitchen siap digunakan secara optimal.",
+    image: "/workshop/workshop-installation-2.png",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Maintenance & After Sales",
+    desc: "Layanan perawatan, perbaikan, dan dukungan teknis untuk menjaga performa kitchen Anda.",
+    image: "/workshop/workshop-building.png",
+  },
+];
 
   const industries = [
   {
@@ -77,7 +80,7 @@ export default function ServicesPage() {
   {
     name: "Central Kitchen",
     icon: CookingPot,
-    image: "/industries/cloud-kitchen.png",
+    image: "/industries/central-kitchen.png",
   },
   {
     name: "Catering",
@@ -92,7 +95,7 @@ export default function ServicesPage() {
   {
     name: "Villa & Apartemen",
     icon: Building2,
-    image: "/industries/villa-apartement.png",
+    image: "/industries/villa-apartment.png",
   },
 ];
 
@@ -127,7 +130,10 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {services.map((item) => (
+              {services.map((item) => {
+                const Icon = item.icon;
+
+                return (
                 <div
                   key={item.title}
                   className="group overflow-hidden rounded-2xl border border-yellow-500/25 bg-zinc-950 transition hover:-translate-y-1 hover:border-yellow-500"
@@ -143,7 +149,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="p-8">
-                    <div className="mb-5 text-5xl">{item.icon}</div>
+                    <Icon className="mb-5 h-14 w-14 text-yellow-500" />
 
                     <h3 className="mb-4 text-2xl font-bold text-yellow-500">
                       {item.title}
@@ -152,7 +158,8 @@ export default function ServicesPage() {
                     <p className="leading-7 text-gray-400">{item.desc}</p>
                   </div>
                 </div>
-              ))}
+                );
+                })}
             </div>
           </div>
         </section>

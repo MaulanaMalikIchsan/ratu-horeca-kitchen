@@ -13,16 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ratu-horeca-kitchen.vercel.app"),
   title: "Ratu Horeca Kitchen",
+  robots: {
+  index: true,
+  follow: true,
+},
+  icons: {
+  icon: "/favicon.jpeg",
+},
   description:
     "Design, Build & Supply Kitchen Equipment untuk Restaurant, Cafe, Hotel, Bakery, Central Kitchen, Villa dan Apartemen.",
 
   keywords: [
-    "Ratu Horeca Kitchen",
     "Kitchen Equipment",
-    "Commercial Kitchen",
     "Kitchen Contractor",
-    "Stainless Fabrication",
     "Restaurant Kitchen",
     "Cafe Kitchen",
     "Hotel Kitchen",
@@ -30,14 +35,36 @@ export const metadata: Metadata = {
     "Central Kitchen",
     "Kitchen Design",
     "Kitchen Installation",
-    "Kitchen Equipment Supplier",
+    "Stainless Fabrication",
+    "Commercial Kitchen",
+    "Ratu Horeca Kitchen",
   ],
 
-  authors: [
-    {
-      name: "Ratu Horeca Kitchen",
-    },
-  ],
+  openGraph: {
+    title: "Ratu Horeca Kitchen",
+    description:
+      "Design, Build & Supply Kitchen Equipment untuk Restaurant, Cafe, Hotel, Bakery, Central Kitchen, Villa dan Apartemen.",
+    url: "https://ratu-horeca-kitchen.vercel.app",
+    siteName: "Ratu Horeca Kitchen",
+    images: [
+      {
+        url: "/logo/rhk-logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ratu Horeca Kitchen",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ratu Horeca Kitchen",
+    description:
+      "Design, Build & Supply Kitchen Equipment.",
+    images: ["/logo/rhk-logo.jpeg"],
+  },
 };
 
 export default function RootLayout({
