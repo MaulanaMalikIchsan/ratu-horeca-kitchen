@@ -60,42 +60,42 @@ export default function ServicesPage() {
   {
     name: "Restaurant",
     icon: UtensilsCrossed,
-    image: "/industries/restaurant.png",
+    image: "/Industries/restaurant.png",
   },
   {
     name: "Cafe",
     icon: Coffee,
-    image: "/industries/cafe.png",
+    image: "/Industries/cafe.png",
   },
   {
     name: "Hotel",
     icon: Hotel,
-    image: "/industries/hotel.png",
+    image: "/Industries/hotel.png",
   },
   {
     name: "Bakery",
     icon: Croissant,
-    image: "/industries/bakery.png",
+    image: "/Industries/bakery.png",
   },
   {
     name: "Central Kitchen",
     icon: CookingPot,
-    image: "/industries/central-kitchen.png",
+    image: "/Industries/central-kitchen.png",
   },
   {
     name: "Catering",
     icon: ChefHat,
-    image: "/industries/catering.png",
+    image: "/Industries/catering.png",
   },
   {
     name: "Rumah Tinggal",
     icon: House,
-    image: "/industries/rumah-tinggal.png",
+    image: "/Industries/rumah-tinggal.png",
   },
   {
     name: "Villa & Apartemen",
     icon: Building2,
-    image: "/industries/villa-apartment.png",
+    image: "/Industries/villa-apartment.png",
   },
 ];
 
