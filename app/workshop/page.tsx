@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import Image from "next/image";
 import { whatsappLink } from "../../lib/constants";
+import ConsultationButton from "../../components/consultation-button";
 import {
   Factory,
   Hammer,
@@ -262,14 +263,9 @@ export default function WorkshopPage() {
               sesuai kebutuhan bisnis Anda.
             </p>
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <ConsultationButton
               className="rounded-xl bg-yellow-500 px-8 py-4 font-semibold text-black hover:bg-yellow-400"
-              >
-              Konsultasi Gratis
-            </a>
+            />
 
           </div>
 

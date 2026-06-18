@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "../../components/navbar";
-import { whatsappLink } from "../../lib/constants";
+import ConsultationButton from "../../components/consultation-button";
 import {
   Phone,
   Mail,
@@ -218,14 +218,10 @@ export default function ContactPage() {
               terbaik untuk kebutuhan kitchen profesional Anda.
             </p>
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-yellow-500 px-8 py-4 font-semibold text-black hover:bg-yellow-400"
-              >
-              Chat WhatsApp
-            </a>
+            <ConsultationButton
+              label="Chat WhatsApp"
+              className="w-full rounded-xl bg-yellow-500 px-6 py-4 font-semibold text-black hover:bg-yellow-400"
+            />
 
           </div>
 

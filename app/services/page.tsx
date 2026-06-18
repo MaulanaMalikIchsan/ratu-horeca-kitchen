@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../../components/navbar";
 import { whatsappLink } from "../../lib/constants";
+import ConsultationButton from "../../components/consultation-button";
 import {
   UtensilsCrossed,
   Coffee,
@@ -29,7 +30,7 @@ export default function ServicesPage() {
     {
       icon: "🍳",
       title: "Kitchen Equipment Supply",
-      desc: "Penyediaan equipment kitchen profesional untuk restoran, cafe, hotel, bakery, dan cloud kitchen.",
+      desc: "Penyediaan equipment kitchen profesional untuk restoran, cafe, hotel, bakery, dan central kitchen.",
       image: "/services/services-equipment.png",
     },
     {
@@ -74,7 +75,7 @@ export default function ServicesPage() {
     image: "/industries/bakery.png",
   },
   {
-    name: "Cloud Kitchen",
+    name: "Central Kitchen",
     icon: CookingPot,
     image: "/industries/cloud-kitchen.png",
   },
@@ -215,14 +216,9 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <ConsultationButton
                 className="rounded-xl bg-yellow-500 px-8 py-4 font-semibold text-black hover:bg-yellow-400"
-                >
-                Konsultasi Gratis
-              </a>
+              />
             </div>
           </div>
         </section>

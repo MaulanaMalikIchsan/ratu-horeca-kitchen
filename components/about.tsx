@@ -44,7 +44,7 @@ export default function About() {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
             Solusi kitchen profesional mulai dari desain,
             fabrikasi, pengadaan peralatan hingga instalasi
-            untuk restoran, cafe, hotel, bakery, cloud kitchen,
+            untuk restoran, cafe, hotel, bakery, central kitchen,
             dan rumah tinggal.
           </p>
         </div>

@@ -1,5 +1,6 @@
 import { whatsappLink } from "../lib/constants";
 import Link from "next/link";
+import ConsultationButton from "./consultation-button";
 
 export default function Hero() {
   return (
@@ -26,18 +27,13 @@ export default function Hero() {
 
           <p className="mb-10 max-w-2xl text-xl leading-relaxed text-gray-200">
             Solusi lengkap untuk kebutuhan kitchen restoran, cafe, hotel,
-            bakery, cloud kitchen dan rumah tinggal.
+            bakery, central kitchen dan rumah tinggal.
           </p>
 
           <div className="flex flex-wrap gap-5">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-yellow-500 px-8 py-4 rounded-xl inline-block"
-              >
-              Konsultasi Gratis
-            </a>
+            <ConsultationButton
+              className="rounded-xl bg-yellow-500 px-8 py-4 font-semibold text-black hover:bg-yellow-400"
+            />
 
             <Link
               href="/portfolio"
